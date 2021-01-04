@@ -2816,27 +2816,25 @@ span.ellipsis {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 3px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .grid-list li {
   list-style: none;
-  width: 33%;
+  width: 50%;
   text-align: center;
 }
 
 .grid-list li a {
   padding: 15px;
-  color: #9bcc37;
-  display: inline-block;
+  color: #8e8f8c;
+  display: block;
   line-height: normal;
 }
 .ibord-post-box {
-  padding: 15px 15px 15px;
+  padding: 25px;
   background: #fff;
-  border-radius: 15px;
-  box-shadow: 0px 0px 24px #c4dceba1;
-  margin-top: 30px;
 }
 .huiye small {
   color: #e7eeeb;
@@ -3519,25 +3517,70 @@ p.header-for a {
   border-bottom: 4px solid transparent;
   border-radius: 5px;
 }
-.menubar-update li a:hover{ border-bottom: 4px solid #9bcc37; color: #9bcc37 !important;}
-.menubar-update li a.active{border-bottom: 4px solid #9bcc37; color: #9bcc37 !important;}
+.menubar-update li a:hover {
+  border-bottom: 4px solid #9bcc37;
+  color: #9bcc37 !important;
+}
+.menubar-update li a.active {
+  border-bottom: 4px solid #9bcc37;
+  color: #9bcc37 !important;
+}
 
 .visibleb {
-    padding-top: 7px;
+  padding-top: 7px;
 }
 
 .visibleb .radio-box li {
-    padding: 0px;
+  padding: 0px;
 }
 
 .visibleb .radio-box li a {
-    color: #7b7b7b;
+  color: #7b7b7b;
 }
 
 .visibleb .radio-box li a:hover {
-    color: #9bcc37;
+  color: #9bcc37;
 }
 
 .visibleb .radio-box li a.active {
-    color: #9bcc37;
+  color: #9bcc37;
+}
+
+.grid-list li a {
+  border-bottom: 4px solid #ccc;
+}
+
+.grid-list li a:hover {
+  border-bottom: 4px solid #9bcc37;
+  color: #9bcc37;
+}
+.grid-list li a.active {
+  border-bottom: 4px solid #9bcc37;
+  color: #9bcc37;
+}
+
+.post-listv {
+  margin-bottom: 30px;
+}
+
+.post-listv ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  border-radius: 4px;
+  border-bottom: 4px solid #9bcc37;
+}
+
+.post-listv ul li {
+  display: inline-block;
+}
+
+.post-listv ul li a {
+  font-size: 18px;
+  color: #7b7b7b;
+}
+.post-listv ul li a.active{color: #9bcc37;}
+.gridlistbox-div {
+    background: #fff;
+    border-radius: 24px;
 }
