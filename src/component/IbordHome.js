@@ -2,30 +2,27 @@ import React, { useState, useEffect } from "react";
 import NavbarUser from "./NavbarUser";
 import Sidebar from "./Sidebar";
 import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
+
 import Subscribers from "./Subscribers1";
 import Subscribed from "./Subscribed";
 import Contribution from "./Contribution";
 import All from "./All";
 import GridList from "../component/GridList";
+import AudioPlayer from "react-h5-audio-player";
+import "react-h5-audio-player/lib/styles.css";
 
 // import NavMy from '../component/NavMy'
 import "../Modalpop.css";
 import {
   MDBIcon,
-  MDBNav,
-  MDBNavItem,
-  MDBNavLink,
   MDBContainer,
   MDBRow,
   MDBCol,
-  MDBModal,
   Link,
-  MDBModalBody,
+  MDBDropdownToggle,
+  MDBDropdownMenu,
+  MDBDropdown,
+  MDBNavItem,
 } from "mdbreact";
 // import { GridList } from "material-ui";
 
@@ -41,17 +38,30 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function IbordHome() {
+export default function IbordHome(props) {
   const classes = useStyles();
 
   const [showMe, setshowMe] = useState(false);
 
   const [container, setContainer] = useState("");
+  const [comment, setComment] = useState(false);
+  const [reply, setReply] = useState(false);
 
   // const [activeItem , setactiveItem] = useState(false)
 
   const operation = () => {
     setshowMe(!showMe);
+  };
+  const commentShow = () => {
+    setComment(!comment);
+  };
+
+  const replybox = () => {
+    setReply(!reply);
+  };
+
+  const handlePress = () => {
+    props.handleClick("leftView");
   };
 
   const handleClick = (opt) => {
@@ -98,6 +108,10 @@ export default function IbordHome() {
 
       case "gridList":
         setContainer(fetchGridList());
+        break;
+
+      case "leftView":
+        setContainer(fetchUser());
         break;
     }
   };
@@ -154,17 +168,13 @@ export default function IbordHome() {
                     Text
                   </Link>
                 </li>
-                <li>
-                  <Link onClick={() => operation()}>
-                    <MDBIcon icon="ellipsis-v" />
-                    Sort
-                  </Link>
-                  {showMe ? (
-                    <div
-                      className="short-list"
-                      onClick={() => setshowMe(false)}
-                      // onClick={() => this.setState({ showMe: false })}
-                    >
+                <MDBNavItem>
+                  <MDBDropdown>
+                    <MDBDropdownToggle>
+                      <MDBIcon icon="ellipsis-v" />
+                      Sort
+                    </MDBDropdownToggle>
+                    <MDBDropdownMenu className="short-list">
                       <ul>
                         <li>
                           <Link to="#">Top Post </Link>
@@ -176,9 +186,9 @@ export default function IbordHome() {
                           <Link to="#">Most of the comments </Link>
                         </li>
                       </ul>
-                    </div>
-                  ) : null}
-                </li>
+                    </MDBDropdownMenu>
+                  </MDBDropdown>
+                </MDBNavItem>
               </ul>
             </MDBCol>
           </MDBRow>
@@ -373,7 +383,7 @@ export default function IbordHome() {
   const fetchWeb = () => {
     return (
       <>
-        <h1> Web </h1>
+        <GridList />
       </>
     );
   };
@@ -398,37 +408,33 @@ export default function IbordHome() {
     return <Contribution />;
   };
 
-  const fetchart=()=>{
+  const fetchart = () => {
     return (
       <>
-        ART 
+        <GridList />
       </>
-    )
-  }
+    );
+  };
 
-  const fetchEye=()=>{
-    return(
+  const fetchEye = () => {
+    return (
       <>
-      Eye
+        <GridList />
       </>
-    )
-  }
+    );
+  };
 
-   const fetchSpinner = () => {
-     return <>Spinner</>;
-   };
+  const fetchSpinner = () => {
+    return <>Spinner</>;
+  };
 
-   const fetchFilter=()=>{
-     return <>
-     Filter
-     </>
-   }
+  const fetchFilter = () => {
+    return <>Filter</>;
+  };
 
-   const fetchGridList = () => {
-     return <GridList />;
-   };
-
-
+  const fetchGridList = () => {
+    return <GridList handleClick={handleClick} />;
+  };
 
   return (
     <>

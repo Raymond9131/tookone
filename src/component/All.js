@@ -48,17 +48,9 @@ export default function All() {
  };
   const handleClick = (opt) => {
     switch (opt) {
-      case 0:
-        setContainer(fetchUser());
-        break;
+     
 
-      case 1:
-        setContainer(fetchWeb());
-        break;
-
-      case 2:
-        setContainer(fetchPost());
-        break;
+      
 
       case 3:
         setContainer(fetchSubscribers());
@@ -74,29 +66,8 @@ export default function All() {
     }
   };
 
-  const fetchUser = () => {
-    return (
-      <>
-        <h1> User Post </h1>
-      </>
-    );
-  };
 
-  const fetchWeb = () => {
-    return (
-      <>
-        <h1> Web </h1>
-      </>
-    );
-  };
 
-  const fetchPost = () => {
-    return (
-      <>
-        <h1> Post </h1>
-      </>
-    );
-  };
 
   const fetchSubscribers = () => {
     return <Subscribers />;

@@ -1,22 +1,19 @@
 import React, { useState, useEffect } from "react";
-import NavbarUser from "../component/NavbarUser";
-import Sidebar from "../component/Sidebar";
 import "../Modalpop.css";
 import {
   MDBIcon,
-  MDBNav,
-  MDBNavItem,
-  MDBNavLink,
   MDBContainer,
   MDBRow,
   MDBCol,
   Link,
-  MDBModal,
-  MDBModalBody,
+  MDBDropdownToggle,
+  MDBDropdownMenu,
+  MDBDropdown,
+  MDBNavItem,
 } from "mdbreact";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
-export default function GridList() {
+export default function GridList(props) {
   const [showMe, setshowMe] = useState(false);
   const [comment, setComment] = useState(false);
   const [reply, setReply] = useState(false);
@@ -37,15 +34,9 @@ export default function GridList() {
     setReply(!reply);
   };
 
-  // toggle = (tab) => (e) => {
-  //   if (this.state.activeItem !== tab) {
-  //     this.setState({
-  //       activeItem: tab,
-  //     });
-  //   }
-  // };
-
-  
+  const handlePress = () => {
+    props.handleClick("leftView");
+  };
 
   return (
     <>
@@ -98,17 +89,13 @@ export default function GridList() {
                   Text
                 </Link>
               </li>
-              <li>
-                <Link onClick={() => operation()}>
-                  <MDBIcon icon="ellipsis-v" />
-                  Sort
-                </Link>
-                {showMe ? (
-                  <div
-                    className="short-list"
-                    onClick={() => setshowMe(false)}
-                    // onClick={() => this.setState({ showMe: false })}
-                  >
+              <MDBNavItem>
+                <MDBDropdown>
+                  <MDBDropdownToggle>
+                    <MDBIcon icon="ellipsis-v" />
+                    Sort
+                  </MDBDropdownToggle>
+                  <MDBDropdownMenu className="short-list">
                     <ul>
                       <li>
                         <Link to="#">Top Post </Link>
@@ -120,9 +107,9 @@ export default function GridList() {
                         <Link to="#">Most of the comments </Link>
                       </li>
                     </ul>
-                  </div>
-                ) : null}
-              </li>
+                  </MDBDropdownMenu>
+                </MDBDropdown>
+              </MDBNavItem>
             </ul>
           </MDBCol>
         </MDBRow>
@@ -130,7 +117,7 @@ export default function GridList() {
       <div className="gridlistbox-div">
         <div className="grid">
           <ul className="grid-list">
-            <li>
+            <li onClick={() => handlePress("leftView")}>
               <Link to="/ibord-home">
                 <MDBIcon icon="th" />
               </Link>
@@ -144,6 +131,15 @@ export default function GridList() {
         </div>
 
         <div className="ibord-post-box">
+          <div className="post-listv">
+            <ul>
+              <li>
+                <Link to="/" className="active">
+                  <i class="fas fa-eye-slash"></i> Invisible
+                </Link>
+              </li>
+            </ul>
+          </div>
           <MDBRow>
             <MDBCol md="12">
               <div className="post-main">
@@ -172,7 +168,7 @@ export default function GridList() {
                   <div className="elvpis">
                     <MDBIcon icon="ellipsis-h" />
                     <span>
-                      <MDBIcon icon="video" />
+                      <MDBIcon icon="camera" />
                     </span>
                   </div>
                 </div>
@@ -362,7 +358,7 @@ export default function GridList() {
                   <div className="elvpis">
                     <MDBIcon icon="ellipsis-h" />
                     <span>
-                      <MDBIcon icon="video" />
+                      <MDBIcon icon="camera" />
                     </span>
                   </div>
                 </div>
@@ -556,7 +552,7 @@ export default function GridList() {
                   <div className="elvpis">
                     <MDBIcon icon="ellipsis-h" />
                     <span>
-                      <MDBIcon icon="video" />
+                      <MDBIcon icon="camera" />
                     </span>
                   </div>
                 </div>

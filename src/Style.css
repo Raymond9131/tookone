@@ -2783,6 +2783,9 @@ span.ellipsis {
   margin: 0px;
   padding: 0px;
   text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .ibord-lists li {
@@ -3579,8 +3582,148 @@ p.header-for a {
   font-size: 18px;
   color: #7b7b7b;
 }
-.post-listv ul li a.active{color: #9bcc37;}
-.gridlistbox-div {
-    background: #fff;
-    border-radius: 24px;
+.post-listv ul li a.active {
+  color: #9bcc37;
 }
+.gridlistbox-div {
+  background: #fff;
+  border-radius: 24px;
+}
+
+.ibord-lists li button {
+  overflow: inherit !important;
+  padding: 0.5rem 1rem;
+  display: block;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #7b7b7b;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.ibord-lists li button:hover {
+  color: #9bcc37;
+}
+
+.ibord-lists li.nav-item .dropdown button:focus {
+  color: #9bcc37;
+}
+
+.ibord-lists li.nav-item .dropdown button:active {
+  color: #9bcc37;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.ibord-lists li .dropdown-menu {
+  left: auto !important;
+  right: 0px !important;
+  top: 10% !important;
+}
+
+.view-post-main {
+  padding: 15px;
+}
+
+.view-dlist ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.view-dlist ul li {
+  display: inline-block;
+  padding: 0px 6px;
+}
+.view-dlist ul li span {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.recent-post {
+    background: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0px 0px 24px #b2e1ffa1;
+}
+
+.left-postv {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.divpo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 8px;
+   background: #0000005c;
+}
+
+.left-postv img {
+    border-radius: 5px;
+    height: 108px;
+}
+
+.divpo .rhap_container {
+    padding: 0px;
+    background: transparent;
+    box-shadow: none;
+}
+
+
+
+.divpo .rhap_container .rhap_progress-section .rhap_time {
+    display: none;
+}
+
+
+.divpo .rhap_container .rhap_progress-section .rhap_progress-bar-show-download .rhap_progress-indicator {
+    background: #9bcc37;
+}
+
+.divpo .rhap_container .rhap_progress-section .rhap_progress-bar-show-download .rhap_download-progress {
+    background: #9bcc37;
+}
+
+
+.divpo .rhap_container .rhap_controls-section .rhap_additional-controls {
+    display: none;
+}
+
+.divpo .rhap_container .rhap_controls-section .rhap_volume-controls {
+    display: none;
+}
+
+.divpo .rhap_container .rhap_controls-section .rhap_button-clear {
+    color: #fff;
+}
+
+
+.text-url h3 {
+    margin: 0px 0px 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.text-url ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.text-url ul li {
+    display: inline-block;
+    padding: 0px 5px;
+    color: #7b7b7b;
+}
+
+.text-url ul li span {
+    display: inline-block;
+    margin-left: 6px;
+}
+

@@ -32,6 +32,7 @@ import HeaderVisitor from "./component/HeaderVisitor";
 import Contribution from "./component/Contribution";
 import Subscribed from "./component/Subscribed";
 import Subscribers from "./component/Subscribers";
+import ViewPostDetails from "./component/ViewPostDetails";
 
 class App extends Component {
   constructor() {
@@ -51,17 +52,16 @@ class App extends Component {
             <Route path="/Career" exact component={Career} />
             <Route path="/iboard" exact component={Board} />
             <Route path="/Sidebar" exact component={Sidebar} />
-
             <Route path="/ibord-home" exact component={IbordHome} />
             <Route path="/grid-list" exact component={GridList} />
             <Route path="/forgot-password" exact component={ForgotPassword} />
             <Route path="/forgot-otp" exact component={ForgotOtp} />
             <Route path="/secured" exact component={Secured} />
             <Route path="/HeaderVisitor" exact component={HeaderVisitor} />
-            {/* <Route path="/IbordHomeF" exact component={IbordHomeF} /> */}
             <Route path="/Contribution" exact component={Contribution} />
             <Route path="/Subscribed" exact component={Subscribed} />
             <Route path="/Subscribers" exact component={Subscribers} />
+            <Route path="/view-post" exact component={ViewPostDetails} />
           </Switch>
           <Footer />
         </BrowserRouter>
