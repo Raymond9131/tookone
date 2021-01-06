@@ -9,6 +9,7 @@ import Contribution from "./Contribution";
 import All from "./All";
 import GridList from "../component/GridList";
 import AudioPlayer from "react-h5-audio-player";
+// import FetchArt from '../component/FetchArt'
 import "react-h5-audio-player/lib/styles.css";
 
 // import NavMy from '../component/NavMy'
@@ -24,6 +25,10 @@ import {
   MDBDropdown,
   MDBNavItem,
 } from "mdbreact";
+import FetchArt from "./FetchArt";
+import FetchEye from "./FetchEye";
+import FetchSpinner from "./FetchSpinner";
+
 // import { GridList } from "material-ui";
 
 const useStyles = makeStyles((theme) => ({
@@ -53,15 +58,13 @@ export default function IbordHome(props) {
     setshowMe(!showMe);
   };
   const commentShow = () => {
+    //  alert('ys',comment)
     setComment(!comment);
+    console.log("yes", comment);
   };
 
   const replybox = () => {
     setReply(!reply);
-  };
-
-  const handlePress = () => {
-    props.handleClick("leftView");
   };
 
   const handleClick = (opt) => {
@@ -70,13 +73,13 @@ export default function IbordHome(props) {
         setContainer(fetchUser());
         break;
 
-      case 1:
-        setContainer(fetchWeb());
-        break;
+      //  case 1:
+      //    setContainer(fetchWeb());
+      //    break;
 
-      case 2:
-        setContainer(fetchPost());
-        break;
+      //  case 2:
+      //    setContainer(fetchPost());
+      //    break;
 
       case 3:
         setContainer(fetchSubscribers());
@@ -91,7 +94,7 @@ export default function IbordHome(props) {
         break;
 
       case "art":
-        setContainer(fetchart());
+        setContainer(fetchArt());
         break;
 
       case "eye-post":
@@ -380,21 +383,21 @@ export default function IbordHome(props) {
     );
   };
 
-  const fetchWeb = () => {
-    return (
-      <>
-        <GridList />
-      </>
-    );
-  };
+  //  const fetchWeb = () => {
+  //    return (
+  //      <>
+  //        <GridList />
+  //      </>
+  //    );
+  //  };
 
-  const fetchPost = () => {
-    return (
-      <>
-        <h1> Post </h1>
-      </>
-    );
-  };
+  //  const fetchPost = () => {
+  //    return (
+  //      <>
+  //        <h1> Post </h1>
+  //      </>
+  //    );
+  //  };
 
   const fetchSubscribers = () => {
     return <Subscribers />;
@@ -408,24 +411,16 @@ export default function IbordHome(props) {
     return <Contribution />;
   };
 
-  const fetchart = () => {
-    return (
-      <>
-        <GridList />
-      </>
-    );
+  const fetchArt = () => {
+    return <FetchArt handleClick={handleClick} />;
   };
 
   const fetchEye = () => {
-    return (
-      <>
-        <GridList />
-      </>
-    );
+    return <FetchEye handleClick={handleClick} />;
   };
 
   const fetchSpinner = () => {
-    return <>Spinner</>;
+    return <FetchSpinner handleClick={handleClick} />;
   };
 
   const fetchFilter = () => {
@@ -447,9 +442,9 @@ export default function IbordHome(props) {
         <div className="content-main top-postion">
           <MDBContainer>
             <div className="{classes.root}">
-              <ul className="menubar-update">
+              <ul className="menubar-update ">
                 <li>
-                  <a className="active" onClick={() => handleClick(0)}>
+                  <a  className="active"  onClick={() => handleClick(0)}>
                     User Post
                   </a>
                 </li>
@@ -458,8 +453,8 @@ export default function IbordHome(props) {
                   <a onClick={() => handleClick(1)}>Web Post</a>
                 </li>
 
-                <li>
-                  <a onClick={() => handleClick("art")}>
+                <li onClick={() => handleClick("art")}>
+                  <a>
                     <i class="fas fa-at"></i>
                   </a>
                 </li>

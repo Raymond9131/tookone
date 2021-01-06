@@ -33,6 +33,7 @@ import Contribution from "./component/Contribution";
 import Subscribed from "./component/Subscribed";
 import Subscribers from "./component/Subscribers";
 import ViewPostDetails from "./component/ViewPostDetails";
+import LogOut from "./component/LogOut";
 
 class App extends Component {
   constructor() {
@@ -62,6 +63,7 @@ class App extends Component {
             <Route path="/Subscribed" exact component={Subscribed} />
             <Route path="/Subscribers" exact component={Subscribers} />
             <Route path="/view-post" exact component={ViewPostDetails} />
+            <Route path="/logout" exact component={LogOut} />
           </Switch>
           <Footer />
         </BrowserRouter>
