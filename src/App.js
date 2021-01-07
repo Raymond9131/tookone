@@ -34,6 +34,7 @@ import Subscribed from "./component/Subscribed";
 import Subscribers from "./component/Subscribers";
 import ViewPostDetails from "./component/ViewPostDetails";
 import LogOut from "./component/LogOut";
+import ColourWheel from "./component/ColourWheel";
 
 class App extends Component {
   constructor() {
@@ -53,17 +54,26 @@ class App extends Component {
             <Route path="/Career" exact component={Career} />
             <Route path="/iboard" exact component={Board} />
             <Route path="/Sidebar" exact component={Sidebar} />
-            <Route path="/ibord-home" exact component={IbordHome} />
+            <Route path="/my-profile" exact component={IbordHome} />
             <Route path="/grid-list" exact component={GridList} />
             <Route path="/forgot-password" exact component={ForgotPassword} />
             <Route path="/forgot-otp" exact component={ForgotOtp} />
             <Route path="/secured" exact component={Secured} />
             <Route path="/HeaderVisitor" exact component={HeaderVisitor} />
-            <Route path="/Contribution" exact component={Contribution} />
-            <Route path="/Subscribed" exact component={Subscribed} />
-            <Route path="/Subscribers" exact component={Subscribers} />
+            <Route
+              path="/my-profile/Contribution"
+              exact
+              component={Contribution}
+            />
+            <Route path="/my-profile/Subscribed" exact component={Subscribed} />
+            <Route
+              path="/my-profile/Subscribers"
+              exact
+              component={Subscribers}
+            />
             <Route path="/view-post" exact component={ViewPostDetails} />
-            <Route path="/logout" exact component={LogOut} />
+            <Route path="/submitotp" exact component={LogOut} />
+            <Route path="/change-color" exact component={ColourWheel} />
           </Switch>
           <Footer />
         </BrowserRouter>

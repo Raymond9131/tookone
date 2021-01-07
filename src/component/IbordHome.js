@@ -3,11 +3,11 @@ import NavbarUser from "./NavbarUser";
 import Sidebar from "./Sidebar";
 import { makeStyles } from "@material-ui/core/styles";
 
-import Subscribers from "./Subscribers1";
+import Subscribers from "./Subscribers";
 import Subscribed from "./Subscribed";
 import Contribution from "./Contribution";
 import All from "./All";
-import GridList from "../component/GridList";
+import GridList from "./GridList";
 import AudioPlayer from "react-h5-audio-player";
 // import FetchArt from '../component/FetchArt'
 import "react-h5-audio-player/lib/styles.css";
@@ -444,7 +444,8 @@ export default function IbordHome(props) {
             <div className="{classes.root}">
               <ul className="menubar-update ">
                 <li>
-                  <a  className="active"  onClick={() => handleClick(0)}>
+                  
+                  <a className="active" onClick={() => handleClick(0)}>
                     User Post
                   </a>
                 </li>
@@ -465,12 +466,17 @@ export default function IbordHome(props) {
                   </a>
                 </li>
                 <li>
-                  <a onClick={() => handleClick("spiner-post")}>
+                  <a 
+                  // onClick={() => handleClick("spiner-post")}
+                  >
                     <i class="fas fa-spinner"></i>
                   </a>
                 </li>
                 <li>
-                  <a onClick={() => handleClick("fillter-post")}>
+                  <a
+                    className="active"
+                    // onClick={() => handleClick("fillter-post")}
+                  >
                     <i class="fas fa-filter"></i>
                   </a>
                 </li>

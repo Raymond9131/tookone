@@ -24,7 +24,7 @@ import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import { MDBInputGroup } from "mdbreact";
 import GoogleMap from "./GoogleMap";
-// import Footer from "../component/Footer";
+import ColourWheel from "../component/ColourWheel";
 
 class LoginRegister extends Component {
   state = {
@@ -542,7 +542,7 @@ class LoginRegister extends Component {
             Chooose Your Favourite Color
           </MDBModalHeader>
           <MDBModalBody>
-            {/* <ColourWheel/> */}
+            <ColourWheel/>
             <MDBBox className="text-center">
               <MDBBtn className="main-btn" onClick={this.toggle_modal1}>
                 Select

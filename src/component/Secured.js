@@ -34,7 +34,7 @@ export default class Secured extends Component {
                       type="text"
                       className="form-control "
                       id="formGroupExampleInput"
-                      placeholder="enter User Name"
+                      placeholder="Enter user name"
                     />
                   </div>
 
@@ -44,7 +44,7 @@ export default class Secured extends Component {
                       type="text"
                       className="form-control "
                       id="formGroupExampleInput"
-                      placeholder="enter your email"
+                      placeholder="Enter your email"
                     />
                   </div>
 
@@ -66,7 +66,8 @@ export default class Secured extends Component {
                   <div className="usefullbox">
                     <h3>Useful information from help center</h3>
                     <p>
-                      You can find more information under <Link># Secured</Link>
+                      You can find more information under
+                      <Link to="/secured"># Secured</Link>
                     </p>
                   </div>
                   <div className="forgot-text text-center articleb">

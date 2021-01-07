@@ -25,7 +25,7 @@ export default class ForgotPassword extends Component {
                       type="text"
                       className="form-control "
                       id="formGroupExampleInput"
-                      placeholder="enter your email"
+                      placeholder="Enter your email"
                     />
                   </div>
 
@@ -52,7 +52,8 @@ export default class ForgotPassword extends Component {
                   <div className="usefullbox">
                     <h3>Useful information from help center</h3>
                     <p>
-                      You can find more information under <Link># Secured</Link>
+                      You can find more information under
+                      <Link to="/secured"># Secured</Link>
                     </p>
                   </div>
                   <div className="forgot-text text-center articleb">

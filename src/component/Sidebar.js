@@ -1,65 +1,67 @@
 import React, { Component } from "react";
-import { Link } from "mdbreact";
+import { NavLink } from "mdbreact";
+
 export default class Sidebar extends Component {
   render() {
+
     return (
       <>
         <div className="sidebar">
           <ul>
             <li>
-              <Link to="/">
+              <NavLink to="/my-profile" activeClassName="active1">
                 <i className="fas fa-home"></i>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/iboard" className="active">
+              <NavLink to="/iboard" activeClassName="active1">
                 <img src={require("./image/ibord.png")} alt="" />
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/">
+              <NavLink to="/">
                 <i class="fas fa-inbox"></i>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/">
+              <NavLink to="/">
                 <i class="fas fa-chart-bar"></i>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/">
+              <NavLink to="/">
                 <i class="fas fa-eye"></i>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/">
+              <NavLink to="/">
                 <i class="fas fa-bookmark"></i>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/">
+              <NavLink to="/">
                 <i class="fas fa-vote-yea"></i>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/">
+              <NavLink to="/">
                 <i class="fas fa-envelope"></i>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/">
+              <NavLink to="/">
                 <i class="fas fa-cog"></i>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/">
+              <NavLink to="/">
                 <i class="fas fa-info-circle"></i>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/">
+              <NavLink to="/">
                 <i class="fas fa-sign-out-alt"></i>
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

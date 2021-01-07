@@ -67,12 +67,12 @@ export default function FetchArt(props) {
               <ul className="radio-box">
                 <li>
                   <Link to="/">
-                    <i class="far fa-check-circle"></i> Hidden Post
+                    <i class="fas fa-eye"></i> Visible
                   </Link>
                 </li>
                 <li>
                   <Link to="/" className="active">
-                    <i class="fab fa-codepen"></i> unfinished Post
+                    <i class="fas fa-eye-slash"></i> Invisible
                   </Link>
                 </li>
               </ul>

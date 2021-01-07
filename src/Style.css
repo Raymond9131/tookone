@@ -898,7 +898,7 @@ img {
 .sidebar img {
   width: 18px;
 }
-.sidebar ul li a.active {
+.sidebar ul li a.active1{
   background: rgb(25, 6, 87);
   background: linear-gradient(
     0deg,
@@ -1419,7 +1419,7 @@ span.cubebox {
   cursor: pointer;
 }
 .avatar-container::before {
-  content: attr(data) "%";
+  content: "";
   display: block;
   opacity: 0;
   width: 40px;
@@ -3798,62 +3798,66 @@ p.header-for a {
 }
 
 .logout-pixel img {
-    box-shadow: 0px 0px 28px #B2E1FFA1;
-    border-radius: 24px;
+  box-shadow: 0px 0px 28px #b2e1ffa1;
+  border-radius: 24px;
 }
 .pexel-title {
-    color: #7B7B7B;
-    margin-bottom: 15px;
+  color: #7b7b7b;
+  margin-bottom: 15px;
 }
 .menubar-update li a:active {
-    border-bottom: 4px solid #9bcc37;
-    color: #9bcc37 !important;
+  border-bottom: 4px solid #9bcc37;
+  color: #9bcc37 !important;
 }
 .menubar-update li a:focus {
-    border-bottom: 4px solid #9bcc37;
-    color: #9bcc37 !important;
+  border-bottom: 4px solid #9bcc37;
+  color: #9bcc37 !important;
 }
 
 .tabs-sppiner-menu {
-    text-align: center;
+  text-align: center;
 }
 
 .tabs-sppiner-menu ul {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
 }
 
 .tabs-sppiner-menu ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 5px 3px;
+  list-style: none;
+  display: inline-block;
+  padding: 5px 3px;
 }
 
 .tabs-sppiner-menu ul li a {
-    border-bottom: 4px solid #aeacac;
-    color: #646262;
-    border-radius: 5px;
-    font-size: 15px;
-    display: block;
-    text-align: center;
+  border-bottom: 4px solid #aeacac;
+  color: #646262;
+  border-radius: 5px;
+  font-size: 15px;
+  display: block;
+  text-align: center;
 }
 
 .tabs-sppiner-menu ul li a:hover {
-    border-bottom: 4px solid #9bcc37;
-    color: #9bcc37;
+  border-bottom: 4px solid #9bcc37;
+  color: #9bcc37;
 }
 
 .tabs-sppiner-menu ul li a.active {
-    border-bottom: 4px solid #9bcc37;
-    color: #9bcc37;
+  border-bottom: 4px solid #9bcc37;
+  color: #9bcc37;
 }
 .finder-box {
-    background: #fff;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 24px #b2e1ffa1;
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 24px #b2e1ffa1;
 }
 .ago-finder {
-    text-align: right;
+  text-align: right;
+}
+
+.color-cricle .rcp {
+  margin: 30px auto;
 }

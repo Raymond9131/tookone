@@ -88,19 +88,19 @@ export default function All() {
           <div className="center-tabs">
             <MDBNav className="">
               <MDBNavItem>
-                <MDBNavLink to="/Contribution">
+                <MDBNavLink to="/my-profile/contribution">
                   <span>15</span>
                   Contributions
                 </MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink to="/Subscribers">
+                <MDBNavLink to="/my-profile/subscribers">
                   <span>7</span>
                   Subscribers
                 </MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink to="/Subscribed">
+                <MDBNavLink to="/my-profile/subscribed">
                   <span>0</span>
                   Subscribed
                 </MDBNavLink>
