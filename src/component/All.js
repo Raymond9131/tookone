@@ -17,8 +17,11 @@ import {
   MDBRow,
   MDBCol,
   MDBModal,
-  Link,
+  MDBDropdownItem,
   MDBModalBody,
+  MDBDropdown,
+  MDBDropdownToggle,
+  MDBDropdownMenu,
 } from "mdbreact";
 
 const useStyles = makeStyles((theme) => ({
@@ -34,24 +37,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function All() {
-
   const [modal, setmodal] = useState(false);
   const [modal2, setmodal2] = useState(false);
   const [container, setContainer] = useState("");
 
- const toggle1 = () => {
-   setmodal(!modal);
- };
+  const toggle1 = () => {
+    setmodal(!modal);
+  };
 
- const toggle2 = () => {
-   setmodal2(!modal2);
- };
+  const toggle2 = () => {
+    setmodal2(!modal2);
+  };
   const handleClick = (opt) => {
     switch (opt) {
-     
-
-      
-
       case 3:
         setContainer(fetchSubscribers());
         break;
@@ -65,9 +63,6 @@ export default function All() {
         break;
     }
   };
-
-
-
 
   const fetchSubscribers = () => {
     return <Subscribers />;
@@ -182,22 +177,26 @@ export default function All() {
 
             <div className="form-group img-postive">
               <img src={require("./image/upload-img.jpg")} alt="" />
-              <div className="ul-div">
-                <ul>
-                  <li>
-                    <i className="fa fa-plus-circle"></i> Vorschuau
-                  </li>
-                  <li>
-                    <i className="fas fa-edit"></i> Bearbeiten
-                  </li>
-                  <li>
-                    <i className="fas fa-futbol"></i> Deac
-                  </li>
-                  <li>
-                    <i class="fas fa-trash-alt"></i> Delete
-                  </li>
-                </ul>
-              </div>
+
+              <span className="ellipsis">
+                <MDBDropdown>
+                  <MDBDropdownToggle nav>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </MDBDropdownToggle>
+                  <MDBDropdownMenu>
+                    <MDBDropdownItem href="#!">
+                      <i className="fa fa-plus-circle"></i> Vorschuau
+                    </MDBDropdownItem>
+
+                    <MDBDropdownItem href="#!">
+                      <i className="fas fa-futbol"></i> Deac
+                    </MDBDropdownItem>
+                    <MDBDropdownItem href="#!">
+                      <i class="fas fa-trash-alt"></i> Delete
+                    </MDBDropdownItem>
+                  </MDBDropdownMenu>
+                </MDBDropdown>
+              </span>
             </div>
           </div>
         </MDBModalBody>
@@ -227,25 +226,26 @@ export default function All() {
 
             <div className="form-group img-postive">
               <img src={require("./image/upload-img.jpg")} alt="" />
+
               <span className="ellipsis">
-                <i class="fas fa-ellipsis-v"></i>
+                <MDBDropdown>
+                  <MDBDropdownToggle nav>
+                    <i class="fas fa-ellipsis-v"></i>
+                  </MDBDropdownToggle>
+                  <MDBDropdownMenu>
+                    <MDBDropdownItem href="#!">
+                      <i className="fa fa-plus-circle"></i> Vorschuau
+                    </MDBDropdownItem>
+
+                    <MDBDropdownItem href="#!">
+                      <i className="fas fa-futbol"></i> Deac
+                    </MDBDropdownItem>
+                    <MDBDropdownItem href="#!">
+                      <i class="fas fa-trash-alt"></i> Delete
+                    </MDBDropdownItem>
+                  </MDBDropdownMenu>
+                </MDBDropdown>
               </span>
-              <div className="ul-div">
-                <ul>
-                  <li>
-                    <i className="fa fa-plus-circle"></i> Vorschuau
-                  </li>
-                  <li>
-                    <i className="fas fa-edit"></i> Bearbeiten
-                  </li>
-                  <li>
-                    <i className="fas fa-futbol"></i> Deac
-                  </li>
-                  <li>
-                    <i class="fas fa-trash-alt"></i> Delete
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
         </MDBModalBody>

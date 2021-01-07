@@ -28,6 +28,7 @@ import {
 import FetchArt from "./FetchArt";
 import FetchEye from "./FetchEye";
 import FetchSpinner from "./FetchSpinner";
+import { NavLink } from "react-router-dom";
 
 // import { GridList } from "material-ui";
 
@@ -202,12 +203,12 @@ export default function IbordHome(props) {
             <div className="grid">
               <ul className="grid-list">
                 <li>
-                  <Link to="/ibord-home" className="active">
+                  <Link to="/my-profile" className="active">
                     <MDBIcon icon="th" />
                   </Link>
                 </li>
                 <li onClick={() => handleClick("gridList")}>
-                  <Link to="/ibord-home">
+                  <Link to="/my-profile">
                     <MDBIcon icon="list" />
                   </Link>
                 </li>
@@ -444,29 +445,53 @@ export default function IbordHome(props) {
             <div className="{classes.root}">
               <ul className="menubar-update ">
                 <li>
-                  
-                  <a className="active" onClick={() => handleClick(0)}>
+                  <NavLink
+                    to="#"
+                    activeClassName="active1"
+                    onClick={() => handleClick(0)}
+                  >
                     User Post
-                  </a>
+                  </NavLink>
+                  {/* <a className="active" onClick={() => handleClick(0)}>
+                    User Post
+                  </a> */}
                 </li>
 
                 <li>
-                  <a onClick={() => handleClick(1)}>Web Post</a>
+                  <NavLink
+                    to="#"
+                    activeClassName="active1"
+                    onClick={() => handleClick(1)}
+                  >
+                    Web Post
+                  </NavLink>
+                  {/* <a onClick={() => handleClick(1)}>Web Post</a> */}
                 </li>
 
-                <li onClick={() => handleClick("art")}>
-                  <a>
+                <li>
+                  <NavLink
+                    to="#"
+                    activeClassName="active1"
+                    onClick={() => handleClick("art")}
+                  >
                     <i class="fas fa-at"></i>
-                  </a>
+                  </NavLink>
+                  {/* <a>
+                    <i class="fas fa-at"></i>
+                  </a> */}
                 </li>
 
                 <li>
-                  <a onClick={() => handleClick("eye-post")}>
+                  <NavLink
+                    to="#"
+                    activeClassName="active1"
+                    onClick={() => handleClick("eye-post")}
+                  >
                     <i class="fas fa-eye-slash"></i>
-                  </a>
+                  </NavLink>
                 </li>
                 <li>
-                  <a 
+                  <a
                   // onClick={() => handleClick("spiner-post")}
                   >
                     <i class="fas fa-spinner"></i>

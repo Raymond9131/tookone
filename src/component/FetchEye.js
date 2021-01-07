@@ -75,7 +75,6 @@ export default function FetchEye(props) {
                     <i class="fab fa-codepen"></i> unfinished Post
                   </Link>
                 </li>
-               
               </ul>
             </MDBCol>
             <MDBCol md="7">
@@ -140,12 +139,12 @@ export default function FetchEye(props) {
           <div className="grid">
             <ul className="grid-list">
               <li onClick={() => handlePress(0)}>
-                <Link to="/ibord-home">
+                <Link to="/my-profile">
                   <MDBIcon icon="th" />
                 </Link>
               </li>
               <li>
-                <Link to="/ibord-home" className="active">
+                <Link to="/my-profile" className="active">
                   <MDBIcon icon="list" />
                 </Link>
               </li>

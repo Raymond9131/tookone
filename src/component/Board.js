@@ -29,6 +29,7 @@ class Board extends Component {
     this.state = {
       showMenu: false,
       activeItem: "1",
+      activeItem1: "1",
       collapseID: "basicCollapse3",
       modal: false,
     };
@@ -71,6 +72,14 @@ class Board extends Component {
     }
   };
 
+  toggle12 = (tab) => (e) => {
+    if (this.state.activeItem1 !== tab) {
+      this.setState({
+        activeItem1: tab,
+      });
+    }
+  };
+
   toggle1 = () => {
     this.setState({
       modal: !this.state.modal,
@@ -94,34 +103,124 @@ class Board extends Component {
           <div className="content-main">
             <MDBCol md="12">
               <div className="card-box">
-                <h1>
-                  <img src={require("./image/iboard-logo.png")} alt="" />
-                  <span style={{ color: "#9BCC37" }}>
+                <div className="iboard-new">
+                  <h1>
+                    <img src={require("./image/iboard-logo.png")} alt="" />
+                  </h1>
+
+                  <MDBNav className="nav-tabs iboardtabs">
+                    <MDBNavItem>
+                      <MDBNavLink
+                        link
+                        to="#"
+                        active={this.state.activeItem1 === "1"}
+                        onClick={this.toggle12("1")}
+                        role="tab"
+                      >
+                        Interests
+                        <span>5</span>
+                      </MDBNavLink>
+                    </MDBNavItem>
+                    <MDBNavItem>
+                      <MDBNavLink
+                        link
+                        to="#"
+                        active={this.state.activeItem1 === "2"}
+                        onClick={this.toggle12("2")}
+                        role="tab"
+                      >
+                        Timeline
+                        <span>5</span>
+                      </MDBNavLink>
+                    </MDBNavItem>
+                    <MDBNavItem>
+                      <MDBNavLink
+                        link
+                        to="#"
+                        active={this.state.activeItem1 === "3"}
+                        onClick={this.toggle12("3")}
+                        role="tab"
+                      >
+                        User
+                        <span>5</span>
+                      </MDBNavLink>
+                    </MDBNavItem>
+                  </MDBNav>
+
+                  <span style={{ color: "#9BCC37", cursor: "pointer" }}>
                     <i className="fa fa-plus" onClick={this.toggle2}></i>
                   </span>
-                </h1>
+                </div>
                 <div className="boxdiv">
-                  <MDBRow>
-                    <MDBCol md="5">
-                      <div className="userpoint">
-                        <img src={require("./image/ellipe-1.png")} alt="" />
-                        <div className="point-name">
-                          <p>User points </p> <b>170</b>
-                        </div>
-                      </div>
-                    </MDBCol>
-                    <MDBCol md="2" className="text-center">
-                      <div className="vertical-border"></div>
-                    </MDBCol>
-                    <MDBCol md="5">
-                      <div className="userpoint">
-                        <img src={require("./image/ellipe-1.png")} alt="" />
-                        <div className="point-name">
-                          <p>Team points </p> <b>10</b>
-                        </div>
-                      </div>
-                    </MDBCol>
-                  </MDBRow>
+                  <MDBTabContent activeItem={this.state.activeItem1}>
+                    <MDBTabPane tabId="1" role="tabpanel">
+                      <MDBRow>
+                        <MDBCol md="5">
+                          <MDBRow>
+                            <MDBCol md="6">
+                              <div className="userpoint">
+                                <img
+                                  src={require("./image/ellipe-1.png")}
+                                  alt=""
+                                />
+                                <div className="point-name">
+                                  <p>User points </p> <b>170</b>
+                                </div>
+                              </div>
+                            </MDBCol>
+
+                            <MDBCol md="6">
+                              <div className="userpoint">
+                                <img
+                                  src={require("./image/ellipe-1.png")}
+                                  alt=""
+                                />
+                                <div className="point-name">
+                                  <p>Team points </p> <b>10</b>
+                                </div>
+                              </div>
+                            </MDBCol>
+                          </MDBRow>
+                        </MDBCol>
+                        <MDBCol md="2" className="text-center">
+                          <div className="vertical-border"></div>
+                        </MDBCol>
+                        <MDBCol md="5">
+                          <MDBRow>
+                            <MDBCol md="6">
+                              <div className="userpoint">
+                                <img
+                                  src={require("./image/token-icon-1.png")}
+                                  alt=""
+                                />
+                                <div className="point-name">
+                                  <p>Token </p> <b>10</b>
+                                </div>
+                              </div>
+                            </MDBCol>
+
+                            <MDBCol md="6">
+                              <div className="userpoint">
+                                <img
+                                  src={require("./image/token-icon-2.png")}
+                                  alt=""
+                                />
+                                <div className="point-name">
+                                  <p>Credits </p> <b>10</b>
+                                </div>
+                              </div>
+                            </MDBCol>
+                          </MDBRow>
+                        </MDBCol>
+                      </MDBRow>
+                    </MDBTabPane>
+                    <MDBTabPane tabId="2" role="tabpanel">
+                      <p className="mt-2">Time line</p>
+                    </MDBTabPane>
+                    <MDBTabPane tabId="3" role="tabpanel">
+                      <p className="mt-2">user</p>
+                    </MDBTabPane>
+                  </MDBTabContent>
                 </div>
               </div>
 
@@ -225,7 +324,12 @@ class Board extends Component {
                     <img src={require("./image/mask.jpg")} alt="" />
                     <ProgressBar variant="success" now={60} />
                     <div className="city-name d-flex align-items-center justify-content-md-around">
-                      Test Category <i class="far fa-trash-alt"></i>
+                      Test Category
+                      <div className="expendbox">
+                        <i class="fas fa-expand"></i>
+                        <i class="far fa-check-circle"></i>
+                        <i class="far fa-trash-alt"></i>
+                      </div>
                     </div>
                   </div>
                 </MDBCol>
@@ -243,7 +347,12 @@ class Board extends Component {
                     <img src={require("./image/mask.jpg")} alt="" />
                     <ProgressBar variant="success" now={60} />
                     <div className="city-name d-flex align-items-center justify-content-md-around">
-                      Test Category <i class="far fa-trash-alt"></i>
+                      Test Category
+                      <div className="expendbox">
+                        <i class="fas fa-expand"></i>
+                        <i class="far fa-check-circle"></i>
+                        <i class="far fa-trash-alt"></i>
+                      </div>
                     </div>
                   </div>
                 </MDBCol>
@@ -261,7 +370,12 @@ class Board extends Component {
                     <img src={require("./image/mask.jpg")} alt="" />
                     <ProgressBar variant="success" now={60} />
                     <div className="city-name d-flex align-items-center justify-content-md-around">
-                      Test Category <i class="far fa-trash-alt"></i>
+                      Test Category
+                      <div className="expendbox">
+                        <i class="fas fa-expand"></i>
+                        <i class="far fa-check-circle"></i>
+                        <i class="far fa-trash-alt"></i>
+                      </div>
                     </div>
                   </div>
                 </MDBCol>
@@ -278,18 +392,108 @@ class Board extends Component {
                     <img src={require("./image/mask.jpg")} alt="" />
                     <ProgressBar variant="success" now={60} />
                     <div className="city-name d-flex align-items-center justify-content-md-around">
-                      Test Category <i class="far fa-trash-alt"></i>
+                      Test Category
+                      <div className="expendbox">
+                        <i class="fas fa-expand"></i>
+                        <i class="far fa-check-circle"></i>
+                        <i class="far fa-trash-alt"></i>
+                      </div>
                     </div>
                   </div>
                 </MDBCol>
               </MDBRow>
-              <MDBRow className="mt-5">
+              {/* <MDBRow className="mt-5">
                 <MDBCol md="12">
                   <div className="add-post">
                     <p>You haven't added any interests yet!</p>
                     <span>
                       <i class="fas fa-plus" onClick={this.toggle2}></i>
                     </span>
+                  </div>
+                </MDBCol>
+              </MDBRow> */}
+
+              <MDBRow className="mt-4">
+                <MDBCol md="3">
+                  <div className="colum-box">
+                    <div className="icon-re">
+                      <span>
+                        <i class="fas fa-redo-alt"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-ellipsis-v"></i>
+                      </span>
+                    </div>
+                    <img src={require("./image/interest-bg.png")} alt="" />
+                    <ProgressBar variant="success" now={60} />
+                    <div className="city-name iboar-ref">
+                      Interests Name<span className="countnumber">57</span>
+                      <div className="expendbox">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </div>
+                    </div>
+                  </div>
+                </MDBCol>
+
+                <MDBCol md="3">
+                  <div className="colum-box">
+                    <div className="icon-re">
+                      <span>
+                        <i class="fas fa-redo-alt"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-ellipsis-v"></i>
+                      </span>
+                    </div>
+                    <img src={require("./image/interest-bg.png")} alt="" />
+                    <ProgressBar variant="success" now={60} />
+                    <div className="city-name iboar-ref">
+                      Interests Name<span className="countnumber">57</span>
+                      <div className="expendbox">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </div>
+                    </div>
+                  </div>
+                </MDBCol>
+
+                <MDBCol md="3">
+                  <div className="colum-box">
+                    <div className="icon-re">
+                      <span>
+                        <i class="fas fa-redo-alt"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-ellipsis-v"></i>
+                      </span>
+                    </div>
+                    <img src={require("./image/interest-bg.png")} alt="" />
+                    <ProgressBar variant="success" now={60} />
+                    <div className="city-name iboar-ref">
+                      Interests Name<span className="countnumber">57</span>
+                      <div className="expendbox">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </div>
+                    </div>
+                  </div>
+                </MDBCol>
+                <MDBCol md="3">
+                  <div className="colum-box">
+                    <div className="icon-re">
+                      <span>
+                        <i class="fas fa-redo-alt"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-ellipsis-v"></i>
+                      </span>
+                    </div>
+                    <img src={require("./image/interest-bg.png")} alt="" />
+                    <ProgressBar variant="success" now={60} />
+                    <div className="city-name iboar-ref">
+                      Interests Name<span className="countnumber">57</span>
+                      <div className="expendbox">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </div>
+                    </div>
                   </div>
                 </MDBCol>
               </MDBRow>

@@ -898,7 +898,7 @@ img {
 .sidebar img {
   width: 18px;
 }
-.sidebar ul li a.active1{
+.sidebar ul li a.active1 {
   background: rgb(25, 6, 87);
   background: linear-gradient(
     0deg,
@@ -928,17 +928,21 @@ img {
   border-radius: 24px;
 }
 .card-box h1 {
-  border-bottom: 4px solid #9bcc37;
   margin: 0px;
   padding: 15px;
   border-radius: 2px;
+  display: inline-block;
+}
+.iboard-new {
+  border-bottom: 4px solid #9bcc37;
+  margin: 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-right: 15px;
 }
-
 .boxdiv {
-  padding: 15px;
+  padding: 35px;
 }
 .card-box h1 span {
   font-size: 18px;
@@ -948,7 +952,15 @@ img {
 .userpoint {
   text-align: center;
 }
+.expendbox i {
+  cursor: pointer;
+  margin: 0px 5px;
+  color: #9bcc37;
+}
 
+.colum-box .progress .progress-bar.bg-success {
+  background-color: #9bcc37 !important;
+}
 .userpoint img {
   margin-bottom: 15px;
   border-radius: 100%;
@@ -3860,4 +3872,90 @@ p.header-for a {
 
 .color-cricle .rcp {
   margin: 30px auto;
+}
+
+.iboardtabs a {
+  position: relative;
+  font-weight: bold;
+  border: 0px !important;
+  border-radius: 5px;
+  border-bottom: 5px solid #7b7b7b !important;
+  overflow: inherit;
+  text-align: center;
+  font-size: 20px;
+  padding: 0px;
+  line-height: 74px;
+}
+
+.iboardtabs a span {
+  position: relative;
+  top: -8px;
+  right: 0px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 22px;
+  background: #9bcc37;
+  border-radius: 100%;
+  color: #fff;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.iboardtabs {
+  border-bottom: 0px;
+  width: 50%;
+  position: relative;
+  top: 4px;
+}
+
+.iboardtabs li {
+  padding: 0px 1px;
+  width: 33%;
+}
+
+ul.nav.nav-tabs.iboardtabs .nav-link.active {
+  border-bottom: 5px solid #9bcc37 !important;
+}
+
+ul.nav.nav-tabs.iboardtabs .nav-link:hover {
+  border-bottom: 5px solid #9bcc37 !important;
+  color: #9bcc37;
+}
+
+.city-name.iboar-ref .expendbox {
+  float: right;
+}
+
+.city-name.iboar-ref span.countnumber {
+  display: inline-block;
+  font-size: 10px;
+  background: #9bcc37;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  color: #fff;
+  position: relative;
+  top: -13px;
+}
+
+span.ellipsis .dropdown button {
+  padding: 0px;
+  margin: 0px;
+  font-size: 36px;
+  color: #000;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+span.ellipsis a.nav-link {
+  padding: 0px;
+  line-height: normal;
+}
+span.ellipsis .dropdown-menu a.dropdown-item {
+  padding: 4px 15px;
+}
+
+span.ellipsis .dropdown-menu a.dropdown-item:focus {
+  outline: none;
 }

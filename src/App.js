@@ -57,7 +57,7 @@ class App extends Component {
             <Route path="/my-profile" exact component={IbordHome} />
             <Route path="/grid-list" exact component={GridList} />
             <Route path="/forgot-password" exact component={ForgotPassword} />
-            <Route path="/forgot-otp" exact component={ForgotOtp} />
+            <Route path="/submitotp" exact component={ForgotOtp} />
             <Route path="/secured" exact component={Secured} />
             <Route path="/HeaderVisitor" exact component={HeaderVisitor} />
             <Route
@@ -72,7 +72,7 @@ class App extends Component {
               component={Subscribers}
             />
             <Route path="/view-post" exact component={ViewPostDetails} />
-            <Route path="/submitotp" exact component={LogOut} />
+            <Route path="/logout" exact component={LogOut} />
             <Route path="/change-color" exact component={ColourWheel} />
           </Switch>
           <Footer />

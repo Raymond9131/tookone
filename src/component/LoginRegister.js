@@ -94,7 +94,7 @@ class LoginRegister extends Component {
                       <MDBNavLink
                         className="signin-btn"
                         link
-                        to="#"
+                        to="#tg1"
                         active={this.state.activeItem === "1"}
                         onClick={this.toggle("1")}
                         role="tab"
@@ -107,7 +107,7 @@ class LoginRegister extends Component {
                       <MDBNavLink
                         className="signin-btn"
                         link
-                        to="#"
+                        to="#tb2"
                         active={this.state.activeItem === "2"}
                         onClick={this.toggle("2")}
                         role="tab"
@@ -616,7 +616,7 @@ class LoginRegister extends Component {
           toggle={this.toggle_modal2}
           size="xl"
         >
-          <MDBModalHeader>Chooose Your Homelocation</MDBModalHeader>
+          <MDBModalHeader>Chooose Your Home Location</MDBModalHeader>
           <MDBModalBody>
             <MDBContainer>
               <MDBRow>
@@ -649,7 +649,7 @@ class LoginRegister extends Component {
                 </MDBRow>
                 <MDBBox className="text-center">
                   <MDBBtn className="main-btn">
-                    <NavLink className="" link to="">
+                    <NavLink className=""  to="/my-profile">
                       Select
                     </NavLink>
                   </MDBBtn>

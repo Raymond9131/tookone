@@ -139,12 +139,12 @@ export default function FetchArt(props) {
           <div className="grid">
             <ul className="grid-list">
               <li onClick={() => handlePress(0)}>
-                <Link to="/ibord-home">
+                <Link to="/my-profile">
                   <MDBIcon icon="th" />
                 </Link>
               </li>
               <li>
-                <Link to="/ibord-home" className="active">
+                <Link to="/my-profile" className="active">
                   <MDBIcon icon="list" />
                 </Link>
               </li>

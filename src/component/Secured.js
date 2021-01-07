@@ -20,9 +20,9 @@ export default class Secured extends Component {
                   </div>
                   <div className="forgot-text">
                     <p>
-                      We detected unusual activity on your account. Please send
-                      you a confirmation email that you can use yout accour
-                      account as usual
+                      We detected unusual activity on your account. Submit your
+                      user name and registered email. A confirmation email will
+                      be sent to you so that you can reactivate your account.
                     </p>
                   </div>
                   <div className="user-profile-secure">
