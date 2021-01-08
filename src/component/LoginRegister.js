@@ -17,6 +17,7 @@ import {
   MDBModalHeader,
   Link,
 } from "mdbreact";
+
 import MobileStoreButton from "react-mobile-store-button";
 import { NavLink } from "react-router-dom";
 import CountUp from "react-countup";
@@ -25,13 +26,36 @@ import Container from "@material-ui/core/Container";
 import { MDBInputGroup } from "mdbreact";
 import GoogleMap from "./GoogleMap";
 import ColourWheel from "../component/ColourWheel";
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 class LoginRegister extends Component {
-  state = {
-    modal: false,
-    modal1: false,
-    modal2: false,
-  };
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeItem: "1",
+      modal: false,
+      modal1: false,
+      modal2: false,
+      startDate: new Date(),
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.onFormSubmit = this.onFormSubmit.bind(this);
+  }
+
+  handleChange(date) {
+    this.setState({
+      startDate: date,
+    });
+  }
+
+  onFormSubmit(e) {
+    e.preventDefault();
+    console.log(this.state.startDate);
+  }
+
   toggle_modal = () => {
     this.setState({
       modal: !this.state.modal,
@@ -54,9 +78,6 @@ class LoginRegister extends Component {
     window.scrollTo(0, 0);
   }
 
-  state = {
-    activeItem: "1",
-  };
 
   toggle = (tab) => () => {
     if (this.state.activeItem !== tab) {
@@ -65,6 +86,7 @@ class LoginRegister extends Component {
       });
     }
   };
+
   render() {
     const iOSUrl =
       "https://itunes.apple.com/us/app/all-of-the-lights/id959389722?mt=8";
@@ -94,7 +116,7 @@ class LoginRegister extends Component {
                       <MDBNavLink
                         className="signin-btn"
                         link
-                        to="#tg1"
+                        to="#"
                         active={this.state.activeItem === "1"}
                         onClick={this.toggle("1")}
                         role="tab"
@@ -107,7 +129,7 @@ class LoginRegister extends Component {
                       <MDBNavLink
                         className="signin-btn"
                         link
-                        to="#tb2"
+                        to="#"
                         active={this.state.activeItem === "2"}
                         onClick={this.toggle("2")}
                         role="tab"
@@ -216,14 +238,14 @@ class LoginRegister extends Component {
                               <option value="3">Other</option>
                             </select>
                           </div>
-                          <div className="form-group">
-                            <label for="exampleForm2">Name</label>
-                            <input
-                              type="text"
-                              id=""
-                              class="form-control"
-                              placeholder="Enter here"
-                            ></input>
+                          <div className="form-group datepiker-new">
+                            <label for="exampleForm2">Date of Birth</label>
+                            <DatePicker
+                              selected={this.state.startDate}
+                              onChange={this.handleChange}
+                              name="startDate"
+                              dateFormat="MM/dd/yyyy"
+                            />
                           </div>
                           <div className="form-group">
                             <input
@@ -542,7 +564,7 @@ class LoginRegister extends Component {
             Chooose Your Favourite Color
           </MDBModalHeader>
           <MDBModalBody>
-            <ColourWheel/>
+            <ColourWheel />
             <MDBBox className="text-center">
               <MDBBtn className="main-btn" onClick={this.toggle_modal1}>
                 Select
@@ -649,7 +671,7 @@ class LoginRegister extends Component {
                 </MDBRow>
                 <MDBBox className="text-center">
                   <MDBBtn className="main-btn">
-                    <NavLink className=""  to="/my-profile">
+                    <NavLink className="" to="/my-profile">
                       Select
                     </NavLink>
                   </MDBBtn>

@@ -102,6 +102,7 @@ select.form-control {
 }
 .form-div select.form-control {
   color: #fff !important;
+  border-color: #fff;
 }
 .logo-icon-div input[type="checkbox"] {
   background-color: transparent;
@@ -3958,4 +3959,171 @@ span.ellipsis .dropdown-menu a.dropdown-item {
 
 span.ellipsis .dropdown-menu a.dropdown-item:focus {
   outline: none;
+}
+
+.form-group.datepiker-new input[type="text"] {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 1px solid #fff;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    border-color: #fff;
+    border-radius: 20px;
+}
+.form-group.datepiker-new .react-datepicker-wrapper {
+    width: 100%;
+}
+.create-post-main {
+    margin-left: 11.5rem;
+}
+
+.create-post-main-box {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0px 0px 15px #b2e1ffa1;
+}
+
+.tab-fillter {
+    padding: 25px 15px 15px;
+}
+
+
+.tab-fillter .nav {
+    background: #fff;
+    box-shadow: 0px 0px 15px #b2e1ffa1;
+    border-radius: 5px;
+    border-bottom: 4px solid #ccc;
+}
+
+.tab-fillter .nav a {
+    border-bottom: 4px solid #ff572200;
+    border-radius: 5px;
+    color: #7b7b7b;
+    padding: .5rem .7rem;
+}
+
+.tab-fillter .nav li {
+    margin-bottom: -4px;
+}
+
+.tab-fillter .nav a:hover {
+    border-bottom: 4px solid #9bcc37;
+    color: #9bcc37;
+}
+
+.tab-fillter .nav a.active {
+    border-bottom: 4px solid #9bcc37;
+    color: #9bcc37;
+}
+
+.tab-fillter .nav a i {
+    margin-right: 3px;
+}
+
+.create-text-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px 25px;
+    border-bottom: 4px solid #9bcc37;
+    border-radius: 5px;
+}
+
+.create-text-title h2 {
+    margin: 0px;
+    color: #9bcc37;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.create-text-title h2 i {
+    margin-right: 5px;
+}
+
+.anoany {
+    display: flex;
+    align-items: center;
+}
+
+.anoany span {
+    display: inline-block;
+}
+
+.anoany .custom-control.custom-switch {margin: 0px 15px;}
+
+
+.tabing-content {
+    padding: 15px 25px;
+}
+.field {
+    position: relative;
+}
+
+
+
+.field .form-control {
+    border-radius: 0px;
+    border: 0px;
+    border-bottom: 3px solid #939393;
+    padding-left: 25px;
+    padding-right: 40px;
+    outline: none;
+}
+
+.field .form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+span.file-comment-icon {
+    position: absolute;
+    bottom: 9px;
+    left: 0px;
+    cursor: pointer;
+}
+
+span.emoji-surprise {
+    right: 12px;
+    position: absolute;
+    bottom: 8px;
+    cursor: pointer;
+}
+.btn-publish {
+    background: #9bcc37;
+    border: 0px;
+    padding: .6rem 2.18rem;
+    border-radius: 30px;
+    color: #fff;
+   
+    outline: none;
+    font-size: 16px;
+}
+.proposal.create-top-align {
+    margin-top: -1.5rem;
+}
+
+.create-user-icon {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    font-size: 48px;
+    color: #ebebeb;
+    z-index: 1;
+    background: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 80px;
+}
+
+.border-create-radius {
+    border-radius: 24px;
+    overflow: hidden;
 }

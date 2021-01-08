@@ -53,7 +53,7 @@ export default class NavbarUser extends Component {
                 <input type="text" placeholder="Discover interesting things" />
               </div>
               <Nav className="navbox">
-                <Nav.Link href="" className="icon-style">
+                <Nav.Link href="/create-post" className="icon-style">
                   <i className="fa fa-plus"></i>
                 </Nav.Link>
 
