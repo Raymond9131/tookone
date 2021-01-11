@@ -36,6 +36,7 @@ import ViewPostDetails from "./component/ViewPostDetails";
 import LogOut from "./component/LogOut";
 import ColourWheel from "./component/ColourWheel";
 import CreatePost from "./component/CreatePost";
+import Settings from "./component/Settings";
 
 class App extends Component {
   constructor() {
@@ -76,6 +77,7 @@ class App extends Component {
             <Route path="/logout" exact component={LogOut} />
             <Route path="/change-color" exact component={ColourWheel} />
             <Route path="/create-post" exact component={CreatePost} />
+            <Route path="/settings" exact component={Settings} />
           </Switch>
           <Footer />
         </BrowserRouter>

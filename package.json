@@ -17,6 +17,7 @@
     "material-ui": "^0.20.2",
     "mdbreact": "^4.27.0",
     "multiselect-react-dropdown": "^1.6.2",
+    "onesignal-emoji-picker": "^1.0.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.4.0",
     "react-colour-wheel": "^1.0.7",

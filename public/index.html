@@ -25,6 +25,7 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Tookone</title>
+    
 
   </head>
   <body>
@@ -40,6 +41,26 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-   
+    <link href="/lib/css/emoji.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="/lib/js/config.js"></script>
+    <script src="/lib/js/util.js"></script>
+    <script src="/lib/js/jquery.emojiarea.js"></script>
+    <script src="/lib/js/emoji-picker.js"></script>
+    <!-- End emoji-picker JavaScript -->
+    
+    <script>
+      $(function () {
+        // Initializes and creates emoji set from sprite sheet
+        window.emojiPicker = new EmojiPicker({
+          emojiable_selector: "[data-emojiable=true]",
+          assetsPath: "/lib/img/",
+          popupButtonClasses: "far fa-surprise",
+        });
+
+        window.emojiPicker.discover();
+      });
+
+    </script>
   </body>
 </html>

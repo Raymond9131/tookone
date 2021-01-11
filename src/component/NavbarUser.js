@@ -53,9 +53,9 @@ export default class NavbarUser extends Component {
                 <input type="text" placeholder="Discover interesting things" />
               </div>
               <Nav className="navbox">
-                <Nav.Link href="/create-post" className="icon-style">
+                <a href="/create-post" className="icon-style" style={{color:"#fff"}}>
                   <i className="fa fa-plus"></i>
-                </Nav.Link>
+                </a>
 
                 <Dropdown>
                   <Dropdown.Toggle variant="" id="dropdown-basic">
