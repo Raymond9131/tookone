@@ -23,12 +23,12 @@ export default class Sidebar extends Component {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/">
+              <NavLink to="/timeline" activeClassName="active1">
                 <i class="fas fa-chart-bar"></i>
               </NavLink>
             </li>
             <li>
-              <NavLink to="/">
+              <NavLink to="/Trash" activeClassName="active1">
                 <i class="fas fa-eye"></i>
               </NavLink>
             </li>
@@ -48,7 +48,7 @@ export default class Sidebar extends Component {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/">
+              <NavLink to="/settings" activeClassName="active1">
                 <i class="fas fa-cog"></i>
               </NavLink>
             </li>
@@ -58,7 +58,7 @@ export default class Sidebar extends Component {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/">
+              <NavLink to="/logout">
                 <i class="fas fa-sign-out-alt"></i>
               </NavLink>
             </li>

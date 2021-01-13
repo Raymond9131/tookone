@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-
+import LoginRegister from "./LoginRegister";
 
 
 
@@ -20,15 +20,11 @@ class Home extends Component {
     render() {
        
         
-        return (<div>
-
-            Home
-
-
-        
-        
-        </div>
-        )
+        return (
+          <div>
+            <LoginRegister/>
+          </div>
+        );
     }
 }
 

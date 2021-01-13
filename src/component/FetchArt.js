@@ -67,12 +67,12 @@ export default function FetchArt(props) {
               <ul className="radio-box">
                 <li>
                   <Link to="/">
-                    <i class="fas fa-eye"></i> Visible
+                    <i class="fas fa-eye"></i> Hidden Post
                   </Link>
                 </li>
                 <li>
                   <Link to="/" className="active">
-                    <i class="fas fa-eye-slash"></i> Invisible
+                    <i class="fas fa-eye-slash"></i> unfinished Post
                   </Link>
                 </li>
               </ul>
@@ -86,7 +86,7 @@ export default function FetchArt(props) {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
+                  <Link to="/" className="active">
                     <MDBIcon icon="camera" />
                     Images
                   </Link>

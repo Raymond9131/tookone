@@ -586,38 +586,38 @@ class LoginRegister extends Component {
             <MDBContainer>
               <div class="masonry-grid">
                 <div className="cell ratio3x4">
-                  <img src={require("./image/mobile-text.png")} />
-                  <MDBBox className="cell-title">
-                    <h4>Team 6</h4>
+                  <img src={require("./image/maskGroup26.png")} />
+                  <MDBBox className="cell-titlemy">
+                    <h4>Team 1</h4>
                   </MDBBox>
                 </div>
                 <div className="cell ratio4x3">
-                  <img src={require("./image/mobile-text.png")} />
-                  <MDBBox className="cell-title">
-                    <h4>Team 6</h4>
+                  <img src={require("./image/maskGroup27.png")} />
+                  <MDBBox className="cell-titlemy">
+                    <h4>Team 4</h4>
                   </MDBBox>
                 </div>
                 <div className="cell ratio1x1">
-                  <img src={require("./image/mobile-text.png")} />
-                  <MDBBox className="cell-title">
-                    <h4>Team 6</h4>
+                  <img src={require("./image/maskGroup23.png")} />
+                  <MDBBox className="cell-titlemy">
+                    <h4 className="mb-60">Team 2</h4>
                   </MDBBox>
                 </div>
                 <div className="cell ratio1x1">
-                  <img src={require("./image/mobile-text.png")} />
-                  <MDBBox className="cell-title">
-                    <h4>Team 6</h4>
+                  <img src={require("./image/maskGroup24.png")} />
+                  <MDBBox className="cell-titlemy">
+                    <h4>Team 5</h4>
                   </MDBBox>
                 </div>
                 <div className="cell ratio3x4">
-                  <img src={require("./image/mobile-text.png")} />
-                  <MDBBox className="cell-title">
-                    <h4>Team 6</h4>
+                  <img src={require("./image/maskGroup22.png")} />
+                  <MDBBox className="cell-titlemy">
+                    <h4>Team 3</h4>
                   </MDBBox>
                 </div>
                 <div className="cell ratio4x3">
-                  <img src={require("./image/mobile-text.png")} />
-                  <MDBBox className="cell-title">
+                  <img src={require("./image/maskGroup25.png")} />
+                  <MDBBox className="cell-titlemy">
                     <h4>Team 6</h4>
                   </MDBBox>
                 </div>

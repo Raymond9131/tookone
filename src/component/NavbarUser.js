@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import { Nav, Navbar, Container, Dropdown } from "react-bootstrap";
 import { Link, MDBIcon } from "mdbreact";
+import { NavLink } from "react-router-dom";
 export default class NavbarUser extends Component {
   constructor() {
     super();
@@ -41,7 +42,7 @@ export default class NavbarUser extends Component {
       <div className="header-fixed">
         <Navbar className="drakbg">
           <Container>
-            <Navbar.Brand href="#home">
+            <Navbar.Brand href="/">
               <img src={require("./image/logo-tookone1.png")} />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -53,9 +54,13 @@ export default class NavbarUser extends Component {
                 <input type="text" placeholder="Discover interesting things" />
               </div>
               <Nav className="navbox">
-                <a href="/create-post" className="icon-style" style={{color:"#fff"}}>
+                <NavLink
+                  to="/create-post"
+                  className="icon-style"
+                  style={{ color: "#fff" }}
+                >
                   <i className="fa fa-plus"></i>
-                </a>
+                </NavLink>
 
                 <Dropdown>
                   <Dropdown.Toggle variant="" id="dropdown-basic">
@@ -83,6 +88,13 @@ export default class NavbarUser extends Component {
 
                     {this.state.popupVisible && (
                       <div className="notifaction-toggle">
+                        <h2>
+                          Notification{" "}
+                          <span>
+                            <i class="fas fa-users"></i> <strong>10</strong>
+                          </span>{" "}
+                        </h2>
+
                         <ul>
                           <li>
                             <a href="/">
@@ -91,17 +103,27 @@ export default class NavbarUser extends Component {
                                   <img src={require("./image/10-min.jpg")} />
                                 </div>
                                 <div className="not-text">
-                                  <h5 className="bold m-0 mr-5">Melissa Doe</h5>
-                                  {/* <small className="mtm-20 fs-10 float-right">
-                                  13:12
-                                </small> */}
-                                  <h6 className="fs-10 m-0 mr-5 pr-15">
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit.
-                                  </h6>
-                                  {/* <p className="badge badge-light-green float-right mtm-30">
-                                  1
-                                </p> */}
+                                  <div className="row">
+                                    <div className="col-md-6">
+                                      <div className="notit4ext">
+                                        <h5 className="bold m-0 mr-5 mb-2">
+                                          Melissa Doe
+                                        </h5>
+                                        <p>Wants to follow you</p>
+                                      </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                      <div className="notit4ext">
+                                        <p>10 Second ago</p>
+                                        {/* <button className="btn btn-rounded btn-danger">
+                                          Cencel
+                                        </button>
+                                        <button className="btn btn-publish">
+                                          Accept
+                                        </button> */}
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </a>
@@ -113,17 +135,27 @@ export default class NavbarUser extends Component {
                                   <img src={require("./image/10-min.jpg")} />
                                 </div>
                                 <div className="not-text">
-                                  <h5 className="bold m-0 mr-5">Melissa Doe</h5>
-                                  {/* <small className="mtm-20 fs-10 float-right">
-                                  13:12
-                                </small> */}
-                                  <h6 className="fs-10 m-0 mr-5 pr-15">
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit.
-                                  </h6>
-                                  {/* <p className="badge badge-light-green float-right mtm-30">
-                                  1
-                                </p> */}
+                                  <div className="row">
+                                    <div className="col-md-6">
+                                      <div className="notit4ext">
+                                        <h5 className="bold m-0 mr-5 mb-2">
+                                          Melissa Doe
+                                        </h5>
+                                        <p>Wants to follow you</p>
+                                      </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                      <div className="notit4ext">
+                                        <p>10 Second ago</p>
+                                        {/* <button className="btn btn-rounded btn-danger">
+                                          Cencel
+                                        </button>
+                                        <button className="btn btn-publish">
+                                          Accept
+                                        </button> */}
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </a>
@@ -135,17 +167,27 @@ export default class NavbarUser extends Component {
                                   <img src={require("./image/10-min.jpg")} />
                                 </div>
                                 <div className="not-text">
-                                  <h5 className="bold m-0 mr-5">Melissa Doe</h5>
-                                  {/* <small className="mtm-20 fs-10 float-right">
-                                  13:12
-                                </small> */}
-                                  <h6 className="fs-10 m-0 mr-5 pr-15">
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit.
-                                  </h6>
-                                  {/* <p className="badge badge-light-green float-right mtm-30">
-                                  1
-                                </p> */}
+                                  <div className="row">
+                                    <div className="col-md-6">
+                                      <div className="notit4ext">
+                                        <h5 className="bold m-0 mr-5 mb-2">
+                                          Melissa Doe
+                                        </h5>
+                                        <p>Wants to follow you</p>
+                                      </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                      <div className="notit4ext">
+                                        <p>10 Second ago</p>
+                                        {/* <button className="btn btn-rounded btn-danger">
+                                          Cencel
+                                        </button>
+                                        <button className="btn btn-publish">
+                                          Accept
+                                        </button> */}
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </a>
@@ -157,39 +199,27 @@ export default class NavbarUser extends Component {
                                   <img src={require("./image/10-min.jpg")} />
                                 </div>
                                 <div className="not-text">
-                                  <h5 className="bold m-0 mr-5">Melissa Doe</h5>
-                                  {/* <small className="mtm-20 fs-10 float-right">
-                                  13:12
-                                </small> */}
-                                  <h6 className="fs-10 m-0 mr-5 pr-15">
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit.
-                                  </h6>
-                                  {/* <p className="badge badge-light-green float-right mtm-30">
-                                  1
-                                </p> */}
-                                </div>
-                              </div>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="/">
-                              <div className="notifactionbox">
-                                <div className="noti-img">
-                                  <img src={require("./image/10-min.jpg")} />
-                                </div>
-                                <div className="not-text">
-                                  <h5 className="bold m-0 mr-5">Melissa Doe</h5>
-                                  {/* <small className="mtm-20 fs-10 float-right">
-                                  13:12
-                                </small> */}
-                                  <h6 className="fs-10 m-0 mr-5 pr-15">
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit.
-                                  </h6>
-                                  {/* <p className="badge badge-light-green float-right mtm-30">
-                                  1
-                                </p> */}
+                                  <div className="row">
+                                    <div className="col-md-6">
+                                      <div className="notit4ext">
+                                        <h5 className="bold m-0 mr-5 mb-2">
+                                          Melissa Doe
+                                        </h5>
+                                        <p>Wants to follow you</p>
+                                      </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                      <div className="notit4ext">
+                                        <p>10 Second ago</p>
+                                        {/* <button className="btn btn-rounded btn-danger">
+                                          Cencel
+                                        </button>
+                                        <button className="btn btn-publish">
+                                          Accept
+                                        </button> */}
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </a>

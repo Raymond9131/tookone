@@ -67,12 +67,12 @@ export default function FetchEye(props) {
               <ul className="radio-box">
                 <li>
                   <Link to="/">
-                    <i class="far fa-check-circle"></i> Hidden Post
+                    <i class="far fa-check-circle"></i> Visible 
                   </Link>
                 </li>
                 <li>
                   <Link to="/" className="active">
-                    <i class="fab fa-codepen"></i> unfinished Post
+                    <i class="fab fa-codepen"></i> Invisible 
                   </Link>
                 </li>
               </ul>
@@ -86,7 +86,7 @@ export default function FetchEye(props) {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
+                  <Link to="/" className="active">
                     <MDBIcon icon="camera" />
                     Images
                   </Link>

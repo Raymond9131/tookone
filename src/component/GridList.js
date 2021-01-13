@@ -65,7 +65,7 @@ export default function GridList(props) {
                 </Link>
               </li>
               <li>
-                <Link to="/">
+                <Link to="/my-profile" className="active">
                   <MDBIcon icon="camera" />
                   Images
                 </Link>
@@ -118,12 +118,12 @@ export default function GridList(props) {
         <div className="grid">
           <ul className="grid-list">
             <li onClick={() => handlePress("leftView")}>
-              <Link to="/ibord-home">
+              <Link to="/my-profile">
                 <MDBIcon icon="th" />
               </Link>
             </li>
             <li>
-              <Link to="/ibord-home" className="active">
+              <Link to="/my-profile" className="active">
                 <MDBIcon icon="list" />
               </Link>
             </li>

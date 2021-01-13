@@ -15,8 +15,8 @@ import ContactUs from "./pages/ContactUs";
 import Investment from "./pages/Investment";
 import Career from "./pages/Career";
 
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from "./component/Home";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+// import Home from "./component/Home";
 import Board from "./component/Board";
 
 import Sidebar from "./component/Sidebar";
@@ -37,6 +37,8 @@ import LogOut from "./component/LogOut";
 import ColourWheel from "./component/ColourWheel";
 import CreatePost from "./component/CreatePost";
 import Settings from "./component/Settings";
+import Timeline from "./component/Timeline";
+
 
 class App extends Component {
   constructor() {
@@ -49,7 +51,7 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route path="/login-register" exact component={LoginRegister} />
-            <Route path="/" exact component={Home} />
+            {/* <Route path="/login-register" exact component={Home} /> */}
             <Route path="/about-us" exact component={AboutUs} />
             <Route path="/Contact-us" exact component={ContactUs} />
             <Route path="/investment" exact component={Investment} />
@@ -78,7 +80,15 @@ class App extends Component {
             <Route path="/change-color" exact component={ColourWheel} />
             <Route path="/create-post" exact component={CreatePost} />
             <Route path="/settings" exact component={Settings} />
+            <Route path="/Timeline" exact component={Timeline} />
+         
           </Switch>
+
+          <Redirect
+            to={{
+              pathname: "/login-register",
+            }}
+          />
           <Footer />
         </BrowserRouter>
       </div>

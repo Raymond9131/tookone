@@ -148,7 +148,7 @@ export default function IbordHome(props) {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/">
+                  <Link to="/my-profile" className="active">
                     <MDBIcon icon="camera" />
                     Images
                   </Link>

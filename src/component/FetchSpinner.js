@@ -73,7 +73,7 @@ export default function FetchSpinner(props) {
                 </Link>
               </li>
               <li>
-                <Link to="/">
+                <Link to="/" className="active">
                   <MDBIcon icon="camera" />
                   Images
                 </Link>
@@ -201,7 +201,9 @@ export default function FetchSpinner(props) {
               <MDBCol md="6">
                 <div className="finder-eightside">
                   <div className="ago-finder">
-                   <span>50 Min Ago <i class="fas fa-ellipsis-v"></i></span>
+                    <span>
+                      50 Min Ago <i class="fas fa-ellipsis-v"></i>
+                    </span>
                   </div>
                 </div>
               </MDBCol>
