@@ -80,7 +80,7 @@ class App extends Component {
             <Route path="/change-color" exact component={ColourWheel} />
             <Route path="/create-post" exact component={CreatePost} />
             <Route path="/settings" exact component={Settings} />
-            <Route path="/Timeline" exact component={Timeline} />
+            <Route path="/timeline" exact component={Timeline} />
          
           </Switch>
 

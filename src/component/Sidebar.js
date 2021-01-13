@@ -28,7 +28,7 @@ export default class Sidebar extends Component {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/Trash" activeClassName="active1">
+              <NavLink to="/">
                 <i class="fas fa-eye"></i>
               </NavLink>
             </li>
