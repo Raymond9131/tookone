@@ -31,7 +31,6 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 class LoginRegister extends Component {
-  
   constructor(props) {
     super(props);
     this.state = {
@@ -78,7 +77,6 @@ class LoginRegister extends Component {
     window.scrollTo(0, 0);
   }
 
-
   toggle = (tab) => () => {
     if (this.state.activeItem !== tab) {
       this.setState({
@@ -91,6 +89,8 @@ class LoginRegister extends Component {
     const iOSUrl =
       "https://itunes.apple.com/us/app/all-of-the-lights/id959389722?mt=8";
 
+    const androidUrl = "https://play.google.com/";
+
     return (
       <div>
         <div className="bg-login">
@@ -99,10 +99,7 @@ class LoginRegister extends Component {
               <MDBCol md="7">
                 <div className="logo-icon-div">
                   <h4>Become a part of</h4>
-                  <img
-                    src={require("./image/logo-tookone1.png")}
-                    className="login-logo"
-                  />
+                  <img src={require("./image/logo-update.png")} />
                   <div className="mobile-text">
                     <img src={require("./image/mobile-text.png")} />
                     <h4>think easy, Experience More, truly social</h4>
@@ -191,7 +188,7 @@ class LoginRegister extends Component {
                     </MDBTabPane>
                     <MDBTabPane tabId="2" role="tabpanel">
                       <form>
-                        <div className="form-div">
+                        <div className="form-div register">
                           <h4>Register for Free</h4>
                           <div className="form-group">
                             <label for="exampleForm2">Name</label>
@@ -247,14 +244,14 @@ class LoginRegister extends Component {
                               dateFormat="MM/dd/yyyy"
                             />
                           </div>
-                          <div className="form-group">
-                            <input
-                              type="checkbox"
-                              className="mr-5"
-                              id=""
-                              placeholder="Enter here"
-                            ></input>
+                          <div className="form-group mb-3">
                             <label>
+                              <input
+                                type="checkbox"
+                                className="mr-5"
+                                id=""
+                                placeholder="Enter here"
+                              ></input>
                               I hereby confirm the Tac/data protection
                             </label>
                           </div>
@@ -288,35 +285,50 @@ class LoginRegister extends Component {
         <div className="pexel-div  p-t-b-40">
           <MDBContainer>
             <MDBRow>
-              <MDBCol md="12" className="">
-                <h4>Pexels</h4>
+              <MDBCol md="12" className=" pixel-login-title">
+                <h4>Pixel</h4>
               </MDBCol>
             </MDBRow>
             <MDBRow>
               <NavLink to="#">
                 <div className="pexel-img-div">
                   <img src={require("./image/kandy.jpg")} />
+                  <div className="text-pixelbox">
+                    With the large selection of financing options on the
+                  </div>
                 </div>
               </NavLink>
               <NavLink to="#">
                 <div className="pexel-img-div">
                   <img src={require("./image/lonavala.jpg")} />
+                  <div className="text-pixelbox">
+                    With the large selection of financing options on the
+                  </div>
                 </div>
               </NavLink>
 
               <NavLink to="#">
                 <div className="pexel-img-div">
                   <img src={require("./image/mumbai.jpg")} />
+                  <div className="text-pixelbox">
+                    With the large selection of financing options on the
+                  </div>
                 </div>
               </NavLink>
               <NavLink to="#">
                 <div className="pexel-img-div">
                   <img src={require("./image/ptaya.jpg")} />
+                  <div className="text-pixelbox">
+                    With the large selection of financing options on the
+                  </div>
                 </div>
               </NavLink>
               <NavLink to="#">
                 <div className="pexel-img-div">
                   <img src={require("./image/sikkim.jpg")} />
+                  <div className="text-pixelbox">
+                    With the large selection of financing options on the
+                  </div>
                 </div>
               </NavLink>
             </MDBRow>
@@ -326,25 +338,40 @@ class LoginRegister extends Component {
           <MDBRow>
             <MDBCol md="6">
               <div className="use-app-div">
-                <MDBIcon icon="mobile-alt" />
-                <h4>Use our Apps</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo duo dolores et ea rebum. Stet
-                </p>
+                <div className="appsstorebox">
+                  <MDBIcon icon="mobile-alt" />
+                  <h4>Use our Apps</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                    justo duo dolores et ea rebum. Stet
+                  </p>
+                </div>
               </div>
             </MDBCol>
 
             <MDBCol md="6">
               <div className="apps-btn-div">
-                <div>
-                  <MobileStoreButton
-                    store="ios"
-                    url={iOSUrl}
-                    linkProps={{ title: "iOS Store Button" }}
-                  />
+                <img src={require("./image/log-44.svg")} alt="" />
+                <div className="button-store">
+                  <div>
+                    <MobileStoreButton
+                      store="ios"
+                      url={iOSUrl}
+                      linkProps={{ title: "iOS Store Button" }}
+                    />
+                  </div>
+                  <div>
+                    {/* <MobileStoreButton
+                      store="android"
+                      url={androidUrl}
+                      linkProps={{ title: "Google Play Store Button" }}
+                    /> */}
+                    <a href={androidUrl}>
+                      <img src={require("./image/en_badge_web_generic.png")} alt="" className="androidbuton-play" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </MDBCol>

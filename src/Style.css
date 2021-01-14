@@ -40,10 +40,11 @@ img {
 }
 /*--------------------Login css---------*/
 .bg-login {
-  background-image: url(./component/image/login-background.jpg);
-  background-size: 100% 100%;
+  background-image: url(./component/image/login-bg-new.svg);
+  background-size: cover;
   background-repeat: no-repeat;
-  height: 657px;
+  height: 800px;
+  background-position: center;
 }
 .text-right {
   text-align: right;
@@ -75,15 +76,15 @@ ul.nav.md-tabs {
   /* margin-top:55px; */
   background-color: transparent;
   box-shadow: none;
-  font-size: 13px;
+ 
 }
 ul.nav.md-tabs li:first-child a {
-  font-size: 13px;
+
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
 }
 ul.nav.md-tabs li:last-child a {
-  font-size: 13px;
+
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -93,13 +94,15 @@ ul.nav.md-tabs li:last-child a {
 }
 .form-div input.form-control,
 select.form-control {
-  border-color: #fff;
-  border-radius: 20px;
+  border-radius: 50px;
   background-color: transparent !important;
+  height: 45px;
+  border: 2px solid #ccc;
 }
 .form-div input.form-control::placeholder {
   color: #fff;
 }
+.form-div.register .form-control::placeholder{color: #9bcc37;}
 .form-div select.form-control {
   color: #fff !important;
   border-color: #fff;
@@ -107,6 +110,9 @@ select.form-control {
 .logo-icon-div input[type="checkbox"] {
   background-color: transparent;
 }
+
+
+
 /*
 select{
     color: #fff;
@@ -118,12 +124,15 @@ select.form-control option:not(:first-of-type) {
   margin-top: 40px;
 }
 .main-btn {
-  background-color: #9bcc37 !important;
-  color: #fff !important;
-  border-radius: 20px;
-  border: none;
-  padding: 0.375rem 2.75rem;
-  height: 38px;
+background-color: #9bcc37 !important;
+    color: #fff !important;
+    border-radius: 50px;
+    border: none;
+    padding: 0.375rem 2.75rem;
+    height: 45px;
+    font-size: 16px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
 }
 .main-btn:hover {
   background-color: #dedede !important;
@@ -150,9 +159,7 @@ img.login-logo {
 .login-form-tab input::placeholder {
   font-size: 13px;
 }
-.login-form-tab .form-group {
-  margin-bottom: 7px;
-}
+
 .mr-5 {
   margin-right: 5px !important;
 }
@@ -174,13 +181,24 @@ span {
   color: #7b7b7b;
 }
 .pexel-img-div img {
-  width: 100%;
-  height: 300px;
-  border-radius: 24px;
+     width: 100%;
+    height: 300px;
+    border-radius: 24px;
+    box-shadow: 0px 0px 10px #c4dceba1;
 }
 .pexel-img-div {
   margin: 0 5px;
   width: 218px;
+  position: relative;
+}
+.text-pixelbox {
+    position: absolute;
+    bottom: 0px;
+    padding: 9px 15px;
+    background: rgb(0 0 0 / 69%);
+    color: #fff;
+    border-radius: 24px;
+    font-size: 16px;
 }
 .download-app-div {
   position: relative;
@@ -197,14 +215,20 @@ span {
   margin-bottom: 20px;
 }
 .apps-btn-div {
-  background-image: url(./component/image/back-app.png);
+  /* background-image: url(./component/image/back-app.png);
   min-height: 500px;
-  background-size: 100%;
+  background-size: 100%; */
   text-align: right;
-  padding: 60px 100px 0 0;
+position: relative;
 }
+.button-store {
+    position: absolute;
+    top: 30%;
+    left: 44%;
+}
+
 .use-app-div p {
-  font-size: 19px;
+  font-size: 24px;
   color: #fff;
 }
 
@@ -444,7 +468,7 @@ button.main-btn b {
 .location-form input.form-control,
 select.form-control {
   border-color: #9bcc37;
-  border-radius: 20px;
+  border-radius: 50px;
   background-color: transparent !important;
 }
 .location-popup {
@@ -746,8 +770,6 @@ img {
   border-radius: 100%;
 }
 
-
-
 .not-text h5 {
   font-weight: bold;
   font-size: 14px;
@@ -807,7 +829,6 @@ img {
   outline: none;
 }
 
-
 .popover-container {
   position: relative;
 }
@@ -843,8 +864,8 @@ img {
 }
 
 .not-text {
- float: left;
-    width: 85%;
+  float: left;
+  width: 85%;
 }
 
 .not-text h5 {
@@ -1302,17 +1323,21 @@ span.cubebox {
 }
 .download-app-div:after {
   background: #9bcc37;
-  content: "";
-  position: absolute;
-  width: 64%;
-  height: 100%;
-  top: 0;
-  left: -5%;
-  transform: skewX(-23deg);
+    content: "";
+    position: absolute;
+    width: 52%;
+    height: 100%;
+    top: 0;
+    left: 3%;
+    transform: skewX(-13deg);
 }
 /* iboard end */
 /* subscribers page css start */
-
+.use-app-div {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+}
 .cover-bg {
   background: url("./component/image/cover-bg.png") no-repeat center top;
   height: 321px;
@@ -3954,19 +3979,20 @@ span.ellipsis .dropdown-menu a.dropdown-item:focus {
 
 .form-group.datepiker-new input[type="text"] {
   display: block;
-  width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #fff;
-  background-color: transparent;
-  background-clip: padding-box;
-  border: 1px solid #fff;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  border-color: #fff;
-  border-radius: 20px;
+    width: 100%;
+    height: 45px;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #9bcc37;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 2px solid #fff;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    border-radius: 50px;
+    outline: none;
 }
 .form-group.datepiker-new .react-datepicker-wrapper {
   width: 100%;
@@ -4523,47 +4549,112 @@ ul.nav.ul-nav-nav {
 }
 
 .notifaction-toggle h2 {
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    border-radius: 5px;
-    border-bottom: 4px solid #9bcc37;
-    color: #7B7B7B;
-    font-weight: bold;
-    margin-bottom: 15px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 5px;
+  border-bottom: 4px solid #9bcc37;
+  color: #7b7b7b;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .notifaction-toggle ul li p {
-    line-height: normal;
-    font-size: 12px;
-    margin-bottom: 5px;
+  line-height: normal;
+  font-size: 12px;
+  margin-bottom: 5px;
 }
 .notifaction-toggle h2 span {
-    position: relative;
+  position: relative;
 }
 
 .notifaction-toggle h2 span strong {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    border-radius: 100%;
-    background: #fa1100;
-    font-size: 12px;
-    text-align: center;
-    color: #fff;
-    position: absolute;
-    top: -11px;
-    right: -11px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 100%;
+  background: #fa1100;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: -11px;
+  right: -11px;
 }
 
 .notit4ext button {
-    padding: 5px 10px;
-    font-size: 12px;
-    margin: 0px 3px;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 0px 3px;
 }
 ul.ibord-lists li a.active {
-    color: #9bcc37;
+  color: #9bcc37;
+}
+.logo-icon-div h4 {
+  font-size: 42px;
+  font-weight: bold;
+}
+.mobile-text h4 {
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.logo-icon-div img {
+  width: 350px;
+}
+
+.form-div h4 {
+  font-weight: 400;
+  font-size: 28px;
+}
+
+.form-div {
+  margin-left: 10%;
+}
+
+.form-div label {
+  font-size: 16px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+
+.form-div.register {
+    margin-left: 5%;
+}
+
+.form-div.register label {
+    margin-bottom: 5px;
+}
+
+.form-div.register .form-group {
+    margin-bottom: 0.7rem;
+}
+
+.form-div.register .form-control {
+    color: #9bcc37 !important;
+    outline: none;
+    font-size: 16px;
+}
+
+.form-div.register .form-control:focus {
+    box-shadow: none;
+    outline: none;
+}
+.invest-now-div h4 {
+    font-size: 32px;
+}
+
+.invest-now-div  span {
+    font-size: 24px;
+}
+.pixel-login-title h4 {
+    font-size: 36px;
+    margin-bottom: 1.5rem;
+}
+img.androidbuton-play {
+    width: 255px;
 }
